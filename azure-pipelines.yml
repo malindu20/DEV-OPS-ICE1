@@ -1,4 +1,13 @@
 # Docker
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure for Students(6e848aad-b14d-4cdd-b1c6-b9e946224fd0)'
+    appType: 'webAppContainer'
+    WebAppName: 'mahara-web-app'
+    DockerNamespace: 'maharacontainer.azurecr.io'
+    DockerRepository: 'maharaimage'
+    DockerImageTag: 'latest'
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
